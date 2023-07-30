@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Uses of VR </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div class="header">
+		<h2> 🖥 VRTUAL TECH 🌐 </h2>
+	</div>
+
+	<div class="dropdown">
+		<button class="dropbtn">☰</button>
+		<div class="dropdown-content">
+		  <a href="#">About VR</a>
+		  <a href="#">Uses of VR</a>
+		  <a href="#">About us</a>
+		</div>
+	  </div>
+
+	<div id="google_translate_element"></div>
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{ pageLanguage: 'en' },
+				'google_translate_element'
+			);
+		}
+
+		
+	</script>
+	<script type="text/javascript"
+		src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+		</script>
+
+	<div class="content">
+		<h2>What virtual reality can be used for 💻</h2>
+		<div class="container">
+			<div class="mySlides">
+				<div class="numbertext">1 / 6</div>
+				<img src="images/buildersusingvr.jpeg" style="width:40%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">2 / 6</div>
+				<img src="images/oldmanusingvr.jpeg" style="width:40%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3 / 6</div>
+				<img src="images/purpleneuronbg.jpeg" style="width:40%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">4 / 6</div>
+				<img src="images/surgeonsusingvr.jpeg" style="width:40%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">5 / 6</div>
+				<img src="images/vrworkroom.jpeg" style="width:40%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">6 / 6</div>
+				<img src="images/womandoingyoga.jpeg" style="width:40%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+		</div>
+
+
+		<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				let i;
+				let slides = document.getElementsByClassName("mySlides");
+				let dots = document.getElementsByClassName("demo");
+				let captionText = document.getElementById("caption");
+				if (n > slides.length) { slideIndex = 1 }
+				if (n < 1) { slideIndex = slides.length }
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " active";
+				captionText.innerHTML = dots[slideIndex - 1].alt;
+			}
+		</script>
+
+
+
+		<div class="content">
+			<!-- Thumbnail images -->
+			<div class="row">
+
+				<div class="column">
+					<img class="demo cursor" src="images/buildersusingvr.jpeg" style="width:100%"
+						onclick="currentSlide(1)" alt="Builders using VR">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="images/oldmanusingvr.jpeg" style="width:100%"
+						onclick="currentSlide(2)" alt="Old man using VR">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="images/purpleneuronbg.jpeg" style="width:100%"
+						onclick="currentSlide(3)" alt="Neurons">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="images/surgeonsusingvr.jpeg" style="width:100%"
+						onclick="currentSlide(4)" alt="Surgeons using VR">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="images/vrworkroom.jpeg" style="width:100%" onclick="currentSlide(5)"
+						alt="VR workroom">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="images/womandoingyoga.jpeg" style="width:100%"
+						onclick="currentSlide(6)" alt="VR workroom">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!--<div class="column side">VR 1
+		<p>Exposure to virtual reality can disrupt the sensory system and lead to symptoms such as nausea, dizziness,
+			sweating, pallor, loss of balance, </p>
+	</div>
+	<div class="column middle">VR 2
+		<p>If you are pregnant, elderly, have vision abnormalities or psychiatric disorders, or suffer from a heart
+			condition or other serious medical condition</p>
+		<img src="images/oldmanusingvr.jpeg" alt="Old man using VR" style="width:100px;height:100px;">
+	</div>
+	<div class="column side">VR 3
+		<p>The VR industry still has far to go before realizing its vision of a totally immersive environment that
+			enables users to engage multiple sensations in a way that approximates reality. </p>
+	</div>-->
+
+	<div class="footer">
+		<p><a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+		</p>
+	</div>
+
+
+</body>
+
+</html>
